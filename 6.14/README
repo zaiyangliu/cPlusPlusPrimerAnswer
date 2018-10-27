@@ -1,0 +1,9 @@
+Write a program that, given the strings
+已知有如下 string 对象：
+     string line1 = "We were her pride of 10 she named us:";
+     string line2 = "Benjamin, Phoenix, the Prodigal"
+     string line3 = "and perspicacious pacific Suzanne";
+
+     string sentence = line1 + ' ' + line2 + ' ' + line3;
+
+counts the number of words in sentence and identifies the largest and smallest words. If several words have the largest or smallest length, report all of them.
