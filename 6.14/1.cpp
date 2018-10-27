@@ -8,6 +8,8 @@ int main(){
   string line2 = "Benjamin, Phoenix, the Prodigal";
   string line3 = "and perspicacious pacific Suzanne ";
   string sentence = line1 + ' ' + line2 + ' ' + line3;
+  string letters ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  string pun_space  (" ,");
   cout <<'"' << sentence << '"' << endl;
   string::size_type pos = 0, prev_pos = 0;
   typedef pair<short, string> track;
@@ -16,7 +18,8 @@ int main(){
   short len;
   int min = sentence.length();
   int max = 0;
-  while((pos = sentence.find_first_of(' ', pos)) != string::npos){
+  while((prev_pos = sentence.find_first_of(letters, prev_pos)) != string::npos){
+    pos = sentence.find_first_of(pun_space, prev_pos);
     len = pos - prev_pos;
     word = sentence.substr(prev_pos, len);
     cout << word << endl;
@@ -25,7 +28,7 @@ int main(){
       min = len;
     if(max < len)
       max = len;
-    prev_pos = ++pos;
+    prev_pos = pos;
   }
 
   int i;
