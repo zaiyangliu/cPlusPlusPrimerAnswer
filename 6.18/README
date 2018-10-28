@@ -1,0 +1,7 @@
+请写一个程序，接受以下两个字符串：
+string quote1("When lilacs last in the dooryard bllom'd");
+string quote2("The child is father of the man");
+
+利用assign() 和 append(), 创造出以下字符串：
+
+string sentence ("The child is in the dooryard");
