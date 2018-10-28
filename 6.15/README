@@ -1,0 +1,3 @@
+写出一个程序，并给出如下字符串：
+"/.+(STL).*$lSSTL/"
+请删除STL之外的所有字符。第一次请使用erase（pos，count），第二次请改用erase（iter，iter）。
